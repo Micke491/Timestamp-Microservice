@@ -10,6 +10,15 @@
   "author": "Nikola",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Micke491/Timestamp-Microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Micke491/Timestamp-Microservice/issues"
+  },
+  "homepage": "https://github.com/Micke491/Timestamp-Microservice#readme"
 }

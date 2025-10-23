@@ -19,7 +19,10 @@ app.get('/api/:date?', (req, res) => {
      if (!date) {
         parsedDate = new Date();
      } else if (/^\d+$/.test(date)) {
-        parsedDate = new Date(parseInt(date));
+         const timestamp = parseInt(date);
+         parsedDate = new Date(
+         date.length === 13 ? timestamp : timestamp * 1000
+   );
      } else {
         parsedDate = new Date(date);
      }
