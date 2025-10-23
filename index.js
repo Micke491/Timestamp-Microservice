@@ -2,6 +2,16 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+var cors = require('cors');
+app.use(cors({optionsSuccessStatus: 200}));
+
+app.use(express.static('public'));
+
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
+
 app.get('/api/:date?', (req, res) => {
     const { date } = req.params;
      let parsedDate;
